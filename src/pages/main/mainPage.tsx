@@ -455,7 +455,7 @@ const MainPage = () => {
 
       {/*  Карточки сервисы --> */}
       <div
-        className={classNames([styles.services, "container"])}
+        className={classNames([styles.services, "container","tablet_container"])}
         id="services"
         ref={anchors.services}
       >
