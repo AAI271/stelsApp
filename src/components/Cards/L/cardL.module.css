@@ -98,6 +98,8 @@
     }
 
     .card__title {
+        padding: 0 40px 0 0;
+
         margin: auto 0 24px;
         font-size: 36px;
         line-height: 133%;
