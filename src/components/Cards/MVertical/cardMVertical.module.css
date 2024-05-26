@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid var(--grey-card-border);
+  border-radius: 24px;
+  height: 777px;
+  background: rgba(66, 66, 66, 0.3);
+  padding: 53px 32px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: var(--text-l);
+  line-height: 125%;
+  margin-top: 48px;
+}
+
+.card__text {
+  font-weight: 300;
+  font-size: var(--text-s);
+  opacity: 0.5;
+  margin-top: 24px;
+}
+
+.card__link {
+  margin-top: auto;
+  font-weight: 500;
+  font-size: var(--text-l-mobile);
+}

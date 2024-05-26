@@ -1,0 +1,85 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  background: var(--orange);
+  background-image: conic-gradient(from var(--border-gradient-angle) at -10% 100%, transparent, transparent 20%, var(--orange));
+  width: fit-content;
+  padding: 2px;
+}
+
+.button.grey {
+  background-image: conic-gradient(from var(--border-gradient-angle) at -10% 100%, transparent, transparent 20%, #56575a);
+  background-color: rgba(37, 39, 43, 1);
+}
+
+.button_inner {
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 156%;
+  border-radius: 32px;
+  transition: all 200ms;
+  background: rgba(37, 28, 17, 0);
+  width: 100%;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: transparent;
+  animation: buttonBorderSpin 1.2s cubic-bezier(0.52, 0.2, 0.43, 1) forwards;
+}
+
+.button:hover .button_inner {
+  background: rgba(37, 28, 17, 1);
+  color: var(--orange);
+}
+
+.button:hover .button_inner path {
+  stroke: var(--orange);
+}
+
+/* grey */
+.button.grey:hover {
+  background-color: transparent;
+}
+
+.button.grey:hover .button_inner {
+  background-color: rgba(11, 13, 17, 1);
+  color: var(--white);
+}
+
+.button.grey:hover .button_inner path {
+  stroke: var(--white);
+}
+
+@property --border-gradient-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+@keyframes buttonBorderSpin {
+  0% {
+    --border-gradient-angle: 0turn;
+  }
+  100% {
+    --border-gradient-angle: 1turn;
+  }
+}
+
+svg {
+  transition: all 200ms;
+}
+
+@media screen and (max-width: 768px) {
+  .button_inner {
+    font-size: var(--text-xs);
+  }
+}

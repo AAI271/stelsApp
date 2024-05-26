@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkgrey: #1c1c1c;
+  --mediumgrey: #424242;
+  --grey: #707070;
+  --orange: #ff7a00;
+  --sides-padding: 32px;
+  --sides-padding-small: 16px;
+  --grey-card-border: #424242;
+  --black-card-bg-hover: #111;
+  --lightgrey: #878787;
+  --black: #000000;
+  --white: #FFF;
+
+  --stels-color-red: #ef4848;
+  --stels-color-green: #22c55e;
+  --stels-color-blue: #1a91f3;
+  --stels-color-orange: #f99b09;
+  --stels-color-gray-light: #080707;
+  --stels-color-gray: #676767;
+  --stels-color-gray-dark: #151515;
+  --stels-color-gray-dark-hard: #1e1e1e;
+
+  --stels-main-backgroud-color: var(--black);
+  --stels-main-backgroud-color-light: var(--stels-color-gray-dark);
+
+  --stels-main-text-color: var(--white);
+  --stels-main-text-color-light: var(--stels-color-gray-light);
+
+  --stels-utils-font: "Saira", sans-serif;
+  --stels-utils-font-size: var(--text-xs);
+  --stels-utils-font-size-small: 12px;
+  --stels-utils-radius: 1em;
+  --stels-utils-pm: 1em;
+
+  --text-xxl: 96px;
+  --text-2xl: 70px;
+  --text-xl: 48px;
+  --text-l: 32px;
+  --text-s: 24px;
+  --text-xs: 16px;
+
+  --text-xxl-mobile: 80px;
+  --text-l-mobile: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--stels-utils-font);
+  font-optical-sizing: auto;
+  background: var(--stels-main-backgroud-color);
+  color: var(--white); 
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: var(--stels-utils-font);
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--stels-utils-radius);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hover {
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.hover:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.swiper-button-disabled {
+  background: var(--darkgrey);
+}
+.swiper-button-disabled svg {
+  opacity: 0.33;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --sides-padding: 20px;
+  }
+}
