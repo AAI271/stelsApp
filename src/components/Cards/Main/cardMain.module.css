@@ -76,7 +76,7 @@
     padding: var(--sides-padding);
     border-radius: 24px;
     gap: 32px;
-    height: 589px;
+    height: 650px;
   }
   .card__content {
     height: 100%;

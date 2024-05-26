@@ -150,7 +150,7 @@ const MainPage = () => {
           <div className={styles.text__text}>{t("main_text")}</div>
         </Fade>
       </div>
-      <div className={classNames([styles.links, "container"])}>
+      <div className={classNames([styles.links, "container","tablet_container"])}>
         <CardS
           title={t("main_link_1")}
           buttonText={t("main_link_1_btn")}
@@ -245,7 +245,7 @@ const MainPage = () => {
         />
       </div>
       <Fade triggerOnce>
-        <div className={classNames([styles.video, "container"])}>
+        <div className={classNames([styles.video, "container","tablet_container"])}>
           <div className={styles.video__nav}>
             <div
               className={classNames([styles.video__nav_btn, "hover"])}
@@ -300,40 +300,40 @@ const MainPage = () => {
             direction="horizontal"
             modules={[Navigation]}
           >
-            <SwiperSlide className={styles.video__container}>
+            <SwiperSlide className={classNames([styles.video__container])}>
               <video
                 src={video1}
-                className={styles.video__content}
+                className={classNames([styles.video__content, "tablet_container"])}
                 autoPlay={true}
                 muted={true}
                 loop={true}
                 playsInline={true}
               ></video>
             </SwiperSlide>
-            <SwiperSlide className={styles.video__container}>
+            <SwiperSlide className={classNames([styles.video__container])}>
               <video
                 src={video2}
-                className={styles.video__content}
+                className={classNames([styles.video__content, "tablet_container"])}
                 autoPlay={true}
                 muted={true}
                 loop={true}
                 playsInline={true}
               ></video>
             </SwiperSlide>
-            <SwiperSlide className={styles.video__container}>
+            <SwiperSlide className={classNames([styles.video__container])}>
               <video
                 src={video3}
-                className={styles.video__content}
+                className={classNames([styles.video__content, "tablet_container"])}
                 autoPlay={true}
                 muted={true}
                 loop={true}
                 playsInline={true}
               ></video>
             </SwiperSlide>
-            <SwiperSlide className={styles.video__container}>
+            <SwiperSlide className={classNames([styles.video__container])}>
               <video
                 src={video4}
-                className={styles.video__content}
+                className={classNames([styles.video__content, "tablet_container"])}
                 autoPlay={true}
                 muted={true}
                 loop={true}
@@ -351,7 +351,7 @@ const MainPage = () => {
         <Fade triggerOnce>
           <div className={styles.cards__title}>{t("main_cards_title")}</div>
         </Fade>
-        <div className={styles.cards__content}>
+        <div className={classNames([styles.cards__content, "tablet_container"])}>
           <CardsSlider>
             <CardMain
               animationTypeMobile="fade"
@@ -411,7 +411,7 @@ const MainPage = () => {
       {/*  <-- Карта */}
       {/*  Карточки стата --> */}
       <div
-        className={classNames([styles.stats, "container"])}
+        className={classNames([styles.stats, "container","tablet_container"])}
         id="stats"
         ref={anchors.stats}
       >

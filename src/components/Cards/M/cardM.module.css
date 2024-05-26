@@ -36,19 +36,10 @@
   transition: 0.75s;
   transition-timing-function: ease;
 }
+
+
+
 @media screen and (max-width: 1000px) {
-  .card {
-    width: 30%;
-    height: 200px;
-    padding: 24px;
-  }
-  .card__title {
-    font-size: var(--text-xl);
-  }
-  }
-
-
-@media screen and (max-width: 768px) {
   .card {
     width: 30%;
     height: 200px;
@@ -62,7 +53,13 @@
     font-size: var(--text-xs);
   }
 }
-@media screen and (max-width: 410px) {
+
+@media screen and (max-width: 750px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 532px) {
   .card{
     width: 100%;
   }
