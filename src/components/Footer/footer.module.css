@@ -83,6 +83,7 @@
 
 @media screen and (max-width: 768px) {
   .links {
+    flex-wrap: wrap;
     justify-content: start;
     margin-top: 48px;
   }
