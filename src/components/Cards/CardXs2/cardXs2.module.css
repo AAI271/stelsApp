@@ -81,7 +81,6 @@
 .type3{
   font-weight: 300;
   font-size: var(--text-l-mobile);
-  opacity: 0.5;
   margin-top: 24px;
   transition: 0.75s;
   transition-timing-function: ease;
@@ -127,10 +126,18 @@
     font-size: var(--text-s);
   }
   .type3 {
-    width: 350px;
+    width: 47%;
     height: 500px;
   }
   .type3 .text {
     font-size: var(--text-s);
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .type3 {
+    width: 350px;
+    height: 500px;
   }
 }

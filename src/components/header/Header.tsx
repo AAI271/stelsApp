@@ -37,6 +37,7 @@ const Header = () => {
       window.removeEventListener("keyup", keyupHandler);
     };
   }, [i18n]);
+  
 
   //   const changeLanguageHandler = (lang: string) => {
   //     i18n.changeLanguage(lang);
@@ -50,6 +51,7 @@ const Header = () => {
   const [error, setError] = useState("");
   const [contactBtnText, setContactBtnText] = useState(t("Send"));
 
+  
   const submitHandler = () => {
     if (!name || !request || !(email || tg)) {
       setError(t("contact_error_text"));
@@ -84,14 +86,24 @@ const Header = () => {
   }, [name, email, tg, request, t]);
 
   const [menuState, setMenuState] = useState({
-    customers: false,
-    services: false,
     company: false,
-    langs: false,
+    products: false,
   });
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (contactFormOpen || mobileMenuOpen) {
+      document.body.classList.add('no_scroll');
+    } else {
+      document.body.classList.remove('no_scroll');
+    }
+
+    // Cleanup function to ensure the class is removed when the component is unmounted
+    return () => {
+      document.body.classList.remove('no_scroll');
+    };
+  }, [contactFormOpen, mobileMenuOpen]);
   return (
     <>
       <header className={styles.header}>
@@ -123,32 +135,14 @@ const Header = () => {
                 className={classNames([styles.header__nav_item])}
                 onClick={() => {
                   setMenuState({
-                    services: false,
                     company: false,
-                    langs: false,
-                    customers: !menuState.customers,
+                    products: false,
                   });
                 }}
               >
                 <a href="/#service" className="hover">
                   {t("Markets")}
                 </a>
-                <div
-                  className={classNames([
-                    styles.header__nav_item_arrow,
-                    menuState.customers && styles.header__nav_item_arrow_active,
-                  ])}
-                >
-                  <svg
-                    width="18"
-                    height="11"
-                    viewBox="0 0 18 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M17 1L9 9L1 1" stroke="white" strokeWidth="2" />
-                  </svg>
-                </div>
               </div>
 
               <div
@@ -156,31 +150,13 @@ const Header = () => {
                 onClick={() => {
                   setMenuState({
                     company: false,
-                    langs: false,
-                    customers: false,
-                    services: !menuState.services,
+                    products: false,
                   });
                 }}
               >
                 <a href="/#distribute" className="hover">
                   {t("Assets")}
                 </a>
-                <div
-                  className={classNames([
-                    styles.header__nav_item_arrow,
-                    menuState.services && styles.header__nav_item_arrow_active,
-                  ])}
-                >
-                  <svg
-                    width="18"
-                    height="11"
-                    viewBox="0 0 18 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M17 1L9 9L1 1" stroke="white" strokeWidth="2" />
-                  </svg>
-                </div>
               </div>
 
               <div
@@ -188,41 +164,21 @@ const Header = () => {
                 onClick={() => {
                   setMenuState({
                     company: false,
-                    langs: false,
-                    customers: false,
-                    services: !menuState.services,
+                    products: false,
                   });
                 }}
               >
                 <a href="/#usage" className="hover">
                   {t("Technology")}
                 </a>
-                <div
-                  className={classNames([
-                    styles.header__nav_item_arrow,
-                    menuState.services && styles.header__nav_item_arrow_active,
-                  ])}
-                >
-                  <svg
-                    width="18"
-                    height="11"
-                    viewBox="0 0 18 11"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M17 1L9 9L1 1" stroke="white" strokeWidth="2" />
-                  </svg>
-                </div>
               </div>
 
               <div
                 className={classNames([styles.header__nav_item])}
                 onClick={() => {
                   setMenuState({
-                    services: false,
-                    langs: false,
-                    customers: false,
                     company: !menuState.company,
+                    products: false,
                   });
                 }}
               >
@@ -238,7 +194,7 @@ const Header = () => {
                 >
                   <div className={styles.header__nav_item_extra}>
                     <a
-                      href="/about"
+                      href="/#about"
                       className={classNames([
                         styles.header__nav_item_extra_item,
                         "hover",
@@ -315,10 +271,8 @@ const Header = () => {
                 className={classNames([styles.header__nav_item])}
                 onClick={() => {
                   setMenuState({
-                    services: false,
-                    langs: false,
-                    customers: false,
-                    company: !menuState.company,
+                    company: false,
+                    products: !menuState.products,
                   });
                 }}
               >
@@ -327,7 +281,7 @@ const Header = () => {
                   className={styles.header__nav_item_extra_wrapper}
                   style={{
                     display:
-                      menuState.company || window.innerWidth > 980
+                      menuState.products || window.innerWidth > 980
                         ? "block"
                         : "none",
                   }}
@@ -424,7 +378,7 @@ const Header = () => {
                 <div
                   className={classNames([
                     styles.header__nav_item_arrow,
-                    menuState.company && styles.header__nav_item_arrow_active,
+                    menuState.products && styles.header__nav_item_arrow_active,
                   ])}
                 >
                   <svg
@@ -563,7 +517,7 @@ const Header = () => {
         </div>
       </header>
       {contactFormOpen && (
-        <div className={styles.contact}>
+        <div className={classNames([styles.contact])}>
           <div className={styles.contact__head}>
             <div
               className={classNames([
@@ -592,7 +546,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div className={classNames([styles.contact__content, "container"])}>
+          <div className={classNames([styles.contact__content, "container","tablet_container"])}>
             <div className={styles.contact__title}>{t("contact_title")}</div>
             <div className={styles.contact__form}>
               <div className={styles.contact__input_wrapper}>

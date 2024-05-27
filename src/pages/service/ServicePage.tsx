@@ -126,7 +126,7 @@ const ServicePage = () => {
       </div>
       {/*  <-- Крупный текст */}
       {/* Дашборд --> */}
-      <div className={styles.image_block} ref={anchors.control} id="control">
+      <div className={classNames([styles.image_block,"tablet_container"])} ref={anchors.control} id="control">
         <Fade triggerOnce>
           <div className={styles.image_block__text}>
             {t("service_image_text")}
@@ -228,7 +228,7 @@ const ServicePage = () => {
                 </div>
             </div> */}
       {/* Ссылка --> */}
-      <div className={styles.image_block_2}>
+      <div className={classNames([styles.image_block_2,"tablet_container"])}>
         <div className={styles.image_block_2__text_content}>
           <Fade triggerOnce cascade damping={1e-1}>
             <div className={styles.image_block_2__title}>

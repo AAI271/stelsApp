@@ -254,7 +254,7 @@
     font-size: 18px;
   }
   .text {
-    padding: 200px var(--sides-padding);
+    padding: 200px 0 0 0;
   }
   .text__text {
     font-size: 60px;
@@ -291,27 +291,20 @@
   .intro__actions {
     margin-top: 40px;
   }
-  .cards {
-    flex-direction: column;
-  }
   .cards_card {
-    width: 350px;
+    width: 47%;
   }
   .intro {
     padding-bottom: 144px;
   }
-  .text {
-    padding: 144px var(--sides-padding);
-  }
+  
   .text__text {
     font-size: var(--text-l);
   }
   .advantages {
     padding: 144px 0;
   }
-  .advantages__content {
-    flex-direction: column;
-  }
+  
   .image_block_2__text_content {
     display: flex;
     flex-direction: column;
@@ -359,5 +352,17 @@
   }
   .advantages__card {
     width: 350px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+  }
+  .cards_card {
+    width: 350px;
+  }
+  .advantages__content {
+    flex-direction: column;
   }
 }

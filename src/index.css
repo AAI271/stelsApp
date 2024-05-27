@@ -111,17 +111,26 @@ a {
 .hidden {
   visibility: hidden;
 }
+.no_scroll{
+  overflow: hidden;
+}
 
-@media (max-width: 1000px) and (min-width: 640px) {
+@media (max-width: 1000px) and (min-width: 768px) {
   .tablet_container {
     width: calc(100vw - 120px);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) and (min-width: 640px) {
+  .tablet_container {
+    width: calc(100vw - 40px);
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 640px) {
   .tablet_container {
-    width: calc(100vw - 40px);
+    width: calc(100vw - 20px);
     margin: 0 auto;
   }
   :root {

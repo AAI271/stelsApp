@@ -186,7 +186,7 @@ const DistributePage = () => {
       </div>
       {/* <-- Карточки */}
       {/*  Крупный текст --> */}
-      <div className={styles.text}>
+      <div className={classNames([styles.text,"tablet_container"])}>
         <Fade triggerOnce>
           <div className={styles.text__text}>{t("dist_text")}</div>
         </Fade>

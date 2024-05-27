@@ -156,7 +156,6 @@
 }
 
 .image_block_2 {
-  background: linear-gradient(180deg, #131313 0%, #000000 100%);
   padding: 140px;
   display: flex;
   align-items: center;
@@ -212,13 +211,14 @@
   }
 }
 
-@media screen and (max-width: 980px) {
+  @media (max-width: 980px) and (min-width: 768px) {
+
   .intro__title {
     font-size: 50px;
   }
   .intro__text {
     font-size: 18px;
-  }
+  } 
   .text {
     padding: 200px var(--sides-padding);
   }
@@ -226,14 +226,22 @@
     font-size: 50px;
   }
   .image_block {
-    padding: 80px;
+    padding: 0;
   }
   .partners {
     padding: 144px var(--sides-padding);
   }
   .image_block_2 {
-    padding: 144px var(--sides-padding);
+    padding: 0;
+    align-items: start;
     gap: 48px;
+  }
+  .image_block_2__title{
+    text-align: left;
+
+    font-size: 40px;
+    width: 60%;
+    min-width: 430px;
   }
   .image_block_2__text_content {
     max-width: 100%;
@@ -242,6 +250,7 @@
     max-width: 100%;
   }
 }
+
 
 @media screen and (max-width: 768px) {
   .intro__title {
@@ -270,6 +279,18 @@
   .image_block__text {
     font-size: var(--text-l-mobile);
   }
+  .image_block{
+    padding: 0;
+  }
+  .image_block_2{
+    padding: 0;
+    gap: 90px;
+  }
+  .image_block_2__title{
+    text-align: left;
+    width: 50%;
+    min-width: 430px;
+  }
   .partners {
     gap: 24px;
   }
@@ -280,24 +301,35 @@
     max-height: 43px;
   }
   .image_block_2__text_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
   .image_block_2__title {
     font-size: var(--text-s);
-    text-align: center;
   }
   .image_block_2__text {
     font-size: var(--text-xs);
     margin-top: 20px;
-    text-align: center;
   }
   .image_block_2__btn {
     margin-top: 40px;
   }
+}
+
+@media screen and (max-width: 700px) {
   .cards {
     flex-direction: column;
+  }
+  .image_block_2__text_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+  }
+  .image_block_2__title {
+    text-align: center;
+  }
+  .image_block_2__text {
+    text-align: center;
   }
 }
 

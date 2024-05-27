@@ -7,7 +7,7 @@ type CardsSliderType = {
 };
 
 const CardsSlider = ({ children }: CardsSliderType) => {
-  if (window.innerWidth < 769) {
+  if (window.innerWidth < 701) {
     return (
       <Swiper
         slidesPerView={"auto"}

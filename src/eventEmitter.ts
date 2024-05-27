@@ -2,6 +2,7 @@ const eventEmitter = {
   _events: {},
   dispatch(event?: any, data?: any) {
     if (!this._events[event]) return;
+    console.log(this._events,event,data)
     this._events[event].forEach((callback) => callback(data));
   },
   subscribe(event, callback) {
