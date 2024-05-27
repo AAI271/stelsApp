@@ -58,7 +58,7 @@ const UsagePage = () => {
       {/* <-- Вступление */}
       {/* Карточки --> */}
       <div
-        className={classNames(["container", styles.cards])}
+        className={classNames(["container", "tablet_container", styles.cards])}
         ref={anchors.directions}
         id="directions"
       >
@@ -79,7 +79,7 @@ const UsagePage = () => {
       {/* Карточки кейсы --> */}
       <div className={styles.cases} ref={anchors.cases} id="cases">
         <div className={styles.cases__title}>{t("Use cases")}</div>
-        <div className={styles.cases__content}>
+        <div className={classNames([styles.cases__content, "tablet_container"])}>
           <CardMain
             type={"use-case"}
             className={styles.cases__card}
@@ -117,7 +117,7 @@ const UsagePage = () => {
         <div className={styles.advantages__title}>
           {t("Technology advantages")}
         </div>
-        <div className={classNames([styles.advantages__content, "container"])}>
+        <div className={classNames([styles.advantages__content, "container", "tablet_container"])}>
           <CardsSlider>
             <CardXs
               className={styles.advantages__card}

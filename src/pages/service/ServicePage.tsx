@@ -80,7 +80,7 @@ const ServicePage = () => {
         </Fade>
       </div>
       <div
-        className={classNames(["container", styles.cards])}
+        className={classNames(["container","tablet_container", styles.cards])}
         ref={anchors.points}
         id="points"
       >
@@ -119,7 +119,7 @@ const ServicePage = () => {
       </div>
       {/*  <-- Карточки */}
       {/* Крупный текст --> */}
-      <div className={styles.text}>
+      <div className={classNames([styles.text,"tablet_container"])}>
         <Fade triggerOnce>
           <div className={styles.text__text}>{t("service_text")}</div>
         </Fade>
