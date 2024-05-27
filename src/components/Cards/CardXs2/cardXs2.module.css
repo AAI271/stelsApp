@@ -31,7 +31,10 @@
   transition-timing-function: ease;
 }
 
-.card:hover .secondText {
+.card:hover {
+  padding-bottom: 25px;
+}
+.secondText {
   padding-bottom: 25px;
 }
 
@@ -62,14 +65,28 @@
   height: 56px;
 }
 
-.type3 .text {
+.type3{
+  font-weight: 500;
+  font-size: var(--text-l);
+  text-transform: uppercase;
+  margin-top: auto;
+}
+.text{
   font-weight: 500;
   font-size: var(--text-l);
   text-transform: uppercase;
   margin-top: auto;
 }
 
-.type3 .secondText {
+.type3{
+  font-weight: 300;
+  font-size: var(--text-l-mobile);
+  opacity: 0.5;
+  margin-top: 24px;
+  transition: 0.75s;
+  transition-timing-function: ease;
+}
+.secondText {
   font-weight: 300;
   font-size: var(--text-l-mobile);
   opacity: 0.5;
@@ -94,7 +111,10 @@
 
 @media screen and (max-width: 980px) {
   .text {
-    font-size: 28px;
+    font-size: var(--text-s);
+  }
+  .secondText{
+    font-size: var(--text-xs);
   }
 }
 

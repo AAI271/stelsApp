@@ -73,7 +73,7 @@ const DistributePage = () => {
       {/* <-- Вступление */}
       {/* Карточки --> */}
       <div
-        className={classNames(["container", styles.cards])}
+        className={classNames(["container", "tablet_container", styles.cards])}
         ref={anchors.features}
         id="features"
       >
@@ -239,7 +239,7 @@ const DistributePage = () => {
 
       {/*  Крупные карточки --> */}
       <div
-        className={styles.advantages}
+        className={classNames([styles.advantages],"tablet_container")}
         ref={anchors.advantages}
         id="advantages"
       >

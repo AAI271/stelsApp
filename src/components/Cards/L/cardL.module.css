@@ -66,12 +66,22 @@
 }
 
 .card__btn {
-    margin-top: 56px;
+    margin-top: auto;
 }
 
 @media screen and (max-width: 1000px) {
     .card{
         width: 45%;
+        min-height: 650px;
+    }
+    .card__title {
+        margin-top: 80px;
+        margin-bottom: 20px;
+        font-size: 27px;
+        line-height: 133%;
+    }
+    .card__list_item_text {
+        font-size: var(--text-s);
     }
     .card:nth-child(2),
     .card:nth-child(5),

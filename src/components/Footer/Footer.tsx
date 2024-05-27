@@ -67,9 +67,20 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={classNames([styles.content, "container"])}>
           <div className={styles.logo_block}>
-            <div className={styles.logo_block__logo}>
-              <Graphite size={6} />
-            </div>
+          <div style={{ marginBottom: "20px"}}>
+            <a href="/">
+              <div style={{ display: "flex", alignItems: "center", opacity:"0.9" }}>
+                <div>
+                  <Graphite primary={"var(--stels-color-orange)"} />
+                </div>
+                <div>
+                  <div>
+                    <span style={{ fontSize: 20, fontWeight: 600 }}>STELS</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
             <div className={styles.logo_block__socials}>
               <a
                 href="https://github.com/gliesereumlab"
