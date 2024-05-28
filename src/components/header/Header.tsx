@@ -3,7 +3,6 @@ import styles from "./header.module.css";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 
-import logo from "./logo.svg";
 import Button from "../Button/Button";
 
 import eventEmitter from "../../eventEmitter.ts";
