@@ -63,6 +63,23 @@
   .card__image {
     width: 280px;
   }
+  .case_type,.case_type {
+    width: 100% !important;
+    border: none !important;
+    gap: 40px !important;
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 0 !important;
+    align-items: start;
+  }
+  .case_type .card__image {
+    max-width: none;
+    width: 100%;
+    height: auto;
+  }
+  .case_type .card__btn {
+    margin-top: 40px;
+  }
   .card{
     gap: 100px;
   }
@@ -94,6 +111,7 @@
 
   
   
+  
 }
 @media screen and (max-width: 700px) {
   .card {
@@ -106,19 +124,5 @@
     gap: 32px;
     height: 650px;
   }
-  .case_type {
-    width: 100%;
-    border: none;
-    gap: 40px;
-    height: auto;
-    padding: 0;
-  }
-  .case_type .card__image {
-    max-width: none;
-    width: 100%;
-    height: auto;
-  }
-  .case_type .card__btn {
-    margin-top: 40px;
-  }
+  
 }

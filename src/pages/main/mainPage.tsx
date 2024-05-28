@@ -394,7 +394,7 @@ const MainPage = () => {
 
       {/*  Карта --> */}
       <div className={styles.globe}>
-        <div className={classNames([styles.globe__content, "container"])}>
+        <div className={classNames([styles.globe__content, "container","tablet_container"])}>
           <div className={styles.global__text_wrapper}>
             <Fade triggerOnce cascade damping={1e-1}>
               <div className={styles.globe__title}>{t("main_globe_title")}</div>

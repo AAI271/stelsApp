@@ -523,10 +523,18 @@ const Header = () => {
               className={classNames([
                 styles.contact__head_content,
                 "container",
+                "tablet_container",
               ])}
             >
-              <div className={styles.contact__head_logo}>
-                <img src={logo} alt="" className="icon" />
+              <div  style={{ display: "flex", alignItems: "center", opacity:"0.9" }}>
+                <div>
+                  <Graphite primary={"var(--stels-color-orange)"} />
+                </div>
+                <div>
+                  <div>
+                    <span style={{ fontSize: 20, fontWeight: 600 }}>STELS</span>
+                  </div>
+                </div>
               </div>
               <div
                 className={classNames([styles.contact__head_close, "hover"])}

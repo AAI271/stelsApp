@@ -11,7 +11,7 @@ type CardXsType = {
 };
 
 const CardXs = ({
-  type = 4,
+  type = 5,
   tag = (
     <svg
       width="30"
@@ -69,6 +69,7 @@ const CardXs = ({
         className,
         type == 2 && styles.type2,
         type == 3 && styles.type3,
+        type == 4 && styles.type4,
       ])}
     >
       <div className={styles.tag}>{tag}</div>

@@ -270,7 +270,10 @@
     max-width: 100%;
   }
   .partners {
-    padding: 144px var(--sides-padding);
+    padding: 0 var(--sides-padding);
+  }
+  .partners__slider {
+    height: 50px;
   }
   .advantages__content {
     gap: 24px;

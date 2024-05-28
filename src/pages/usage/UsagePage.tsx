@@ -63,9 +63,9 @@ const UsagePage = () => {
         id="directions"
       >
         <CardsSlider>
-          <CardXs tag={t("usage_cards_1_tag")} text={t("usage_cards_1_text")} />
-          <CardXs tag={t("usage_cards_2_tag")} text={t("usage_cards_2_text")} />
-          <CardXs tag={t("usage_cards_3_tag")} text={t("usage_cards_3_text")} />
+          <CardXs tag={t("usage_cards_1_tag")} text={t("usage_cards_1_text")} type={4}/>
+          <CardXs tag={t("usage_cards_2_tag")} text={t("usage_cards_2_text")} type={4}/>
+          <CardXs tag={t("usage_cards_3_tag")} text={t("usage_cards_3_text")} type={4}/>
         </CardsSlider>
       </div>
       {/* <-- Карточки */}

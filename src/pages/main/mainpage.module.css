@@ -453,10 +453,6 @@
   .cards__title {
     font-size: 60px;
   }
-  .globe__image{
-    width: 84vw;
-    margin: auto;
-  }
 }
 
 
@@ -510,7 +506,7 @@
     margin-top: 16px;
   }
   .stats__content {
-    gap: 12px;
+    gap: 32px;
   }
   .stats__card{
     width: 45%;
@@ -540,7 +536,7 @@
     flex-direction: column;
   }
 }
-@media (max-width: 750px) and (min-width: 533px) {
+@media (max-width: 768px) and (min-width: 533px) {
   .stats__card:nth-child(2),
   .stats__card:nth-child(4),
   .stats__card:nth-child(6){
