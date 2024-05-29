@@ -139,7 +139,7 @@ const Header = () => {
                   });
                 }}
               >
-                <a href="/#service" className="hover">
+                <a href="/service" className="hover">
                   {t("Markets")}
                 </a>
               </div>
@@ -153,7 +153,7 @@ const Header = () => {
                   });
                 }}
               >
-                <a href="/#distribute" className="hover">
+                <a href="/distribute" className="hover">
                   {t("Assets")}
                 </a>
               </div>
@@ -167,7 +167,7 @@ const Header = () => {
                   });
                 }}
               >
-                <a href="/#usage" className="hover">
+                <a href="/usage" className="hover">
                   {t("Technology")}
                 </a>
               </div>
@@ -193,7 +193,7 @@ const Header = () => {
                 >
                   <div className={styles.header__nav_item_extra}>
                     <a
-                      href="/#about"
+                      href="/about"
                       className={classNames([
                         styles.header__nav_item_extra_item,
                         "hover",

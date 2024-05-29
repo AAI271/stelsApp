@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./i18n";
 import MainPage from "./pages/main/mainPage.tsx";
 import Header from "./components/header/Header";
@@ -23,5 +23,5 @@ function App() {
     </Router>
   );
 }
-
+  
 export default App;
